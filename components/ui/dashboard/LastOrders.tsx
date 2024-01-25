@@ -83,7 +83,7 @@ const LastOrders = () => {
           <TableBody>
             {lastOrders.map((order, i) => (
               <TableRow key={i}>
-                <TableCell>
+                <TableCell className="w-[15rem]">
                   <figure className="flex items-center gap-x-2 mr-6">
                     <Image
                       src={order.img}
@@ -92,13 +92,13 @@ const LastOrders = () => {
                       height={32}
                       className="flex-shrink-0"
                     />
-                    <h3 className="text-[#3A3F51]  dark:text-gray-100/75 md:text-[1rem] text-[.7rem] leading-[1.5rem]">
+                    <h3 className="text-[#3A3F51] whitespace-nowrap  dark:text-gray-100/75 md:text-[1rem] text-[.7rem] leading-[1.5rem]">
                       {order.name}
                     </h3>
                   </figure>
                 </TableCell>
 
-                <TableCell className="md:text-[1rem]  text-[.7rem] text-[#737373] font-normal">
+                <TableCell className="md:text-[1rem] whitespace-nowrap text-[.7rem] text-[#737373] font-normal">
                   {order.date}
                 </TableCell>
                 <TableCell className="text-[#0D062D] dark:text-gray-100/75  md:text-[1rem] text-[.7rem] font-medium">
