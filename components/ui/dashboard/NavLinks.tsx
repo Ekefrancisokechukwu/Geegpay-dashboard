@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const NavLinks = () => {
+  const variants = {};
+
   return (
     <nav className="mt-[1.25rem]">
       <ul className="flex flex-col gap-y-4">
@@ -13,7 +15,8 @@ const NavLinks = () => {
             href={"#"}
             className="px-[2rem] relative py-[0.625rem] inline-block"
           >
-            <svg
+            <motion.svg
+              whileHover={{ scale: 1.2 }}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -38,7 +41,7 @@ const NavLinks = () => {
                 d="M7.24 13.4301H5.34C3.15 13.4301 2 14.5801 2 16.7601V18.6601C2 20.8501 3.15 22.0001 5.33 22.0001H7.23C9.41 22.0001 10.56 20.8501 10.56 18.6701V16.7701C10.57 14.5801 9.42 13.4301 7.24 13.4301Z"
                 className="fill-[#0D062D] dark:fill-slate-500"
               />
-            </svg>
+            </motion.svg>
             <svg
               className="absolute right-0 top-1/2 -translate-y-1/2"
               xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +62,13 @@ const NavLinks = () => {
         <li>
           <Link href={"#"} className="px-[2rem] py-[0.625rem] inline-block">
             <motion.svg
+              variants={variants}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
+              whileHover={{ scale: 1.2 }}
             >
               <motion.path
                 initial={{ pathLength: 0 }}
@@ -105,6 +110,7 @@ const NavLinks = () => {
         <li>
           <Link href={"#"} className="px-[2rem] py-[0.625rem] inline-block">
             <motion.svg
+              whileHover={{ scale: 1.2 }}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -169,6 +175,7 @@ const NavLinks = () => {
         <li>
           <Link href={"#"} className="px-[2rem] py-[0.625rem] inline-block">
             <motion.svg
+              whileHover={{ scale: 1.2 }}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -221,6 +228,7 @@ const NavLinks = () => {
         <li>
           <Link href={"#"} className="px-[2rem] py-[0.625rem] inline-block">
             <motion.svg
+              whileHover={{ scale: 1.2 }}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -287,6 +295,7 @@ const NavLinks = () => {
         <li>
           <Link href={"#"} className="px-[2rem] py-[0.625rem] inline-block">
             <motion.svg
+              whileHover={{ scale: 1.2 }}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

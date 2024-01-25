@@ -3,12 +3,21 @@
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const ToggleTheme = () => {
   const { setTheme, theme, systemTheme } = useTheme();
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  // console.log(theme === "light");
+  const variants = {
+    hoverScale: {
+      scale: 1.5,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   useEffect(() => {
     if (theme === "dark") {
@@ -27,19 +36,22 @@ const ToggleTheme = () => {
           !isDarkTheme ? "bg-[#34CAA5]" : ""
         )}
       >
-        <svg
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 18 18"
           fill="none"
+          whileHover={"hoverScale"}
         >
           <g clipPath="url(#clip0_1826_464)">
             <path
               d="M9 13.2188C11.33 13.2188 13.2188 11.33 13.2188 9C13.2188 6.67005 11.33 4.78125 9 4.78125C6.67005 4.78125 4.78125 6.67005 4.78125 9C4.78125 11.33 6.67005 13.2188 9 13.2188Z"
               fill={`${!isDarkTheme ? "#ffff" : "#B2ABAB"}`}
             />
-            <path
+            <motion.path
+              variants={variants}
+              whileHover={"hoverScale"}
               d="M9 3.09345C8.53363 3.09345 8.15625 2.71564 8.15625 2.2497V1.40625C8.15625 0.940309 8.53363 0.5625 9 0.5625C9.46637 0.5625 9.84375 0.940309 9.84375 1.40625V2.2497C9.84375 2.71564 9.46637 3.09345 9 3.09345Z"
               fill={`${!isDarkTheme ? "#ffff" : "#B2ABAB"}`}
             />
@@ -82,7 +94,7 @@ const ToggleTheme = () => {
               />
             </clipPath>
           </defs>
-        </svg>
+        </motion.svg>
       </button>
 
       <button
