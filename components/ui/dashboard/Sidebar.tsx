@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import ToggleTheme from "./ToggleTheme";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import NavLinks from "./NavLinks";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   return (
@@ -30,8 +33,12 @@ const Sidebar = () => {
         </div>
 
         <div className="w-full h-28 flex grow"></div>
+
         <div className="flex flex-col gap-y-4">
-          <button className="inline-block px-[2rem] py-[0.625rem]">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className="inline-block px-[2rem] py-[0.625rem]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -61,9 +68,12 @@ const Sidebar = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </motion.button>
 
-          <button className="inline-block px-[2rem] py-[0.625rem]">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className="inline-block px-[2rem] py-[0.625rem]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -96,8 +106,11 @@ const Sidebar = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
-          <button className="inline-block px-[2rem] py-[0.625rem]">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className="inline-block px-[2rem] py-[0.625rem]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -146,7 +159,7 @@ const Sidebar = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </motion.button>
         </div>
       </ScrollArea>
     </aside>

@@ -18,7 +18,13 @@ const TotalOrders = () => {
     { month: "2000", value: 10 },
     { month: "2000", value: 9 },
     { month: "2001", value: 8.4 },
-    { month: "2001", value: 11 },
+    { month: "2002", value: 11 },
+    { month: "2003", value: 6 },
+    { month: "2004", value: 5 },
+    { month: "2005", value: 9 },
+    { month: "2006", value: 7 },
+    { month: "2007", value: 4 },
+    { month: "2008", value: 5 },
   ];
 
   const config: AreaConfig = {

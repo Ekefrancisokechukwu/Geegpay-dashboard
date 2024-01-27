@@ -16,9 +16,18 @@ const TotalIncome = () => {
     { month: "1998", value: 7 },
     { month: "1999", value: 8 },
     { month: "2000", value: 8.8 },
-    { month: "2000", value: 9 },
-    { month: "2001", value: 10 },
-    { month: "2001", value: 11 },
+    { month: "2001", value: 9 },
+    { month: "2002", value: 10 },
+    { month: "2003", value: 11 },
+    { month: "2004", value: 10 },
+    { month: "2005", value: 11 },
+    { month: "2006", value: 12 },
+    { month: "2007", value: 13 },
+    { month: "2008", value: 12 },
+    { month: "2010", value: 11 },
+    { month: "2011", value: 10 },
+    { month: "2012", value: 9 },
+    { month: "2013", value: 11 },
   ];
 
   const config: AreaConfig = {
